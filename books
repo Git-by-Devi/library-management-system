@@ -1,0 +1,13 @@
+const mongoose=require("mongoose");
+const books=new mongoose.Schema({
+
+let bookslist = [
+
+ { book id: 1, title: "Animal farm", author: "George orwell" },
+  { book id: 2, title: "The call of the wild", author:"Jack london"},
+  { book id: 3, title: "Rich dad and poor dad", author: "Robert" },
+  { book id: 4, title: "Wonder",author: "Palacio" },
+  { book id: 5, title: "Harry potter and sorcerer's stone", author: "J.K.Rowling" },
+  { book id: 5, title: "Harry potter and the chamber of secret", author: "J.K.Rowling" },
+];
+module.exports=mongoose.model("Todo",todoschema);
