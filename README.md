@@ -5,15 +5,12 @@ A **library management system** built with **Node.js** for easy and efficient ma
 ## Features
 
 - Add, edit, and update books
-- Track issued and available books
-- Manage member registrations
-- Issue and return books
-- Borrowing history and fines
 
 ## Technologies Used
 
 - Node.js
 - JavaScript
+- mongoDb
 
 ## Getting Started
 
@@ -49,6 +46,4 @@ node server.js
 - Push to the branch (`git push origin feature/new-feature`)
 - Open a pull request
 
-## License
 
-This project is licensed under the MIT License.
