@@ -37,13 +37,3 @@ node server.js
 
 
 
-
-## How to Contribute
-
-- Fork the repository
-- Create your feature branch (`git checkout -b feature/new-feature`)
-- Commit your changes (`git commit -am 'Add new feature'`)
-- Push to the branch (`git push origin feature/new-feature`)
-- Open a pull request
-
-
