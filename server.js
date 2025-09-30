@@ -1,5 +1,6 @@
 const express = require("express");
 const connectdb = require("./db");
+<<<<<<< HEAD
 connectdb();
 const Book = require("./librarySchema");
 const app = express();
@@ -108,4 +109,26 @@ app.delete("/books/:id", async (req, res) => {
 
 app.listen(3000, () => {
   console.log(`The server is running at the port ${PORT}`);
+=======
+const jwt = require("jsonwebtoken");
+const bookRoutes = require("./routes/bookRoutes");
+const app = express();
+const PORT = 3000;
+const JWT_SECRET = "my_secret_key"; 
+app.use(express.json());
+connectdb();
+// Login to get JWT token
+app.post("/login", (req, res) => {
+  const { username, id } = req.body;
+  if (!username || !id) {
+    return res.status(400).json({ message: "Please provide username and id" });
+  }
+  const user = { id: id, author: username };
+  const token = jwt.sign(user, JWT_SECRET, { expiresIn: "1h" });
+  res.json({ token });
+});
+app.use("/", bookRoutes);
+app.listen(PORT, () => {
+  console.log(`Server running at port ${PORT}`);
+>>>>>>> dd64dc6 (Add project files)
 });

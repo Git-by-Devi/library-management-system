@@ -1,0 +1,12 @@
+const express = require("express");
+const router = express.Router();
+const authenticateToken = require("../middleware/auth");
+const bookController = require("../controllers/bookController");
+router.get("/bookslist", bookController.getAllBooks);
+router.get("/book/bookslist", bookController.getPaginatedBooks);
+router.get("/bookslist/:id", bookController.getBookById);
+router.get("/bookslist/search/:name", bookController.searchBook);
+router.post("/bookslist", authenticateToken, bookController.addBook);
+router.put("/bookslist/:id", authenticateToken, bookController.updateBook);
+router.delete("/bookslist/:id", authenticateToken, bookController.deleteBook);
+module.exports = router;
